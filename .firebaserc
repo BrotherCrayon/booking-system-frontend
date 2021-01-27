@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "the-booking-system": {
+      "hosting": {
+        "booking-system-frontend": [
+          "the-booking-system"
+        ]
+      }
+    }
+  }
+}

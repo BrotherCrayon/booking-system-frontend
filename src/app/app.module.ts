@@ -12,12 +12,17 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './Layout/header/header.component';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FormPageComponent } from './Layout/form-page/form-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RequestFormComponent,
     HeaderComponent,
+    FormPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,9 @@ import { HeaderComponent } from './Layout/header/header.component';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
